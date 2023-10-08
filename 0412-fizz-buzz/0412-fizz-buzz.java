@@ -1,11 +1,22 @@
 class Solution {
     public List<String> fizzBuzz(int n) {
-        List<String> result = new ArrayList<>();
+        List<String> result = new ArrayList<>();        
+        int fizz=0, buzz =0;
         
         for(int i=1; i<=n; i++) {
             String str = "";
-            if(i%3==0) str += "Fizz";
-            if(i%5==0) str += "Buzz";
+            fizz++; buzz++;
+            
+            if(fizz==3) {
+                str += "Fizz";
+                fizz = 0;
+            }
+            
+            if(buzz==5) {
+                str += "Buzz";
+                buzz = 0;
+            }
+            
             if(str.equals("")) str = String.valueOf(i);
             
             result.add(str);
