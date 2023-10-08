@@ -17,7 +17,7 @@ class Solution {
                 buzz = 0;
             }
             
-            if(str.equals("")) str = String.valueOf(i);
+            if(str.equals("")) str = i+"";
             
             result.add(str);
         }
